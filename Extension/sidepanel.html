@@ -1,20 +1,28 @@
-<!DOCTYPE html>
 <html>
-<head>
-  <title>Custom Side Panel</title>
+  <head>
+    <title>Gemini Side Panel</title>
+  </head>
   <style>
-    body {
+    .defaults {
       margin: 0;
       padding: 0;
     }
-    iframe {
-      width: 100%;
-      height: 100%;
-      border: none;
+    .theme-a {
+      background: #fff;
+    }
+    @media (prefers-color-scheme: dark) {
+      .theme-a.adaptive {
+        background: #131314;
+        color: #fff;
+      }
     }
   </style>
-</head>
-<body>
-  <iframe src="https://gemini.google.com/app"></iframe>
-</body>
+  <body class="defaults theme-a adaptive">
+    <iframe
+      src="https://gemini.google.com"
+      frameborder="0"
+      style="width: 100%; height: 100%"
+      allow="clipboard-write"
+    ></iframe>
+  </body>
 </html>
