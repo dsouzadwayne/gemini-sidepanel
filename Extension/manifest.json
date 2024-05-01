@@ -1,0 +1,33 @@
+{
+    "manifest_version": 3,
+    "name": "Custom Side Panel Extension",
+    "description": "Opens a custom website in Google Chrome's side panel",
+    "version": "1.0",
+    "icons": {
+      "16": "images/icon-16.png",
+      "48": "images/icon-48.png",
+      "128": "images/icon-128.png"
+    },
+    "permissions": [
+      "sidePanel"
+    ],
+    "host_permissions": [
+      "*://*.example.com/*"
+    ],
+    "background": {
+      "service_worker": "service-worker.js"
+    },
+    "side_panel": {
+      "default_path": "sidepanel.html"
+    },
+    "web_accessible_resources": [
+      {
+        "resources": [
+          "sidepanel.html"
+        ],
+        "matches": [
+          "<all_urls>"
+        ]
+      }
+    ]
+  }
